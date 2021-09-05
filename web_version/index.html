@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Page Content goes here -->
+            <div class="row">
+                <div class="col s12 card-panel teal lighten-2">
+                    <h4 class="center-align">Card number to binder slot calculator</h4>
+                </div>
+                <form class="col s12" id="form">
+                    <div class="row">
+                        <div class="input-field col s3 offset-s3">
+                            <i class="material-icons prefix">grid_on</i>
+                            <input type="number" id="num_slots" min="1" max="100" class="validate" required>
+                            <label for="num_slots">Number of slots per page</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <i class="material-icons prefix">looks_3</i>
+                            <input type="number" id="card_num" min="1" max="1000000" class="validate" required>
+                            <label for="card_num" data-error="test">Card number</label>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="col s3 offset-s3">         
+                            <button class="btn-large waves-effect waves-light disabled" type="button" onclick="formSubmit()" name="submit" id="submit_btn">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                        <div class="col s3 offset-s1">
+                            <button class="btn-large waves-effect waves-light" type="reset" name="clear">Clear
+                                <i class="material-icons right">clear_all</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div id="response_div"></div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
+
